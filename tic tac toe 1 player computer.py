@@ -94,39 +94,38 @@ def did_o_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select
     position_eight = tic_tac_toe_chart[15]
     position_nine = tic_tac_toe_chart[17]
     if player == "X":
-        print (Red + "You Win!" + END)
         # 1 2 3 is filled with X
         if position_one == "O" and position_two == "O" and position_three == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
             return play_again()
         # 4 5 6 filled with X
         elif position_four == "O" and position_five == "O" and position_six == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
             return play_again()
         # 7 8 9 filled with X
         elif position_seven == "O" and position_eight == "O" and position_nine == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
             return play_again()
         elif position_one == "O" and position_four == "O" and position_seven == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
             return play_again()
         elif position_two == "O" and position_five == "O" and position_eight == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
         elif position_three == "O" and position_six == "O" and position_nine == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
             return play_again()
         elif position_one == "O" and position_five == "O" and position_nine == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
             return play_again()
         elif position_three == "O" and position_five == "O" and position_seven == "O":
-            print (Red + "You Win!" + END)
+            print (Blue + "You Win!" + END)
             print(tic_tac_toe_chart) 
             return play_again()
         elif position_one != "1" and position_two != "2" and position_three != "3" and position_five != "4" and position_six != "6"and position_seven != "7"and position_eight != "8"and position_nine != "9":
