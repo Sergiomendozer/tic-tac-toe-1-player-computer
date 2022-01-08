@@ -40,47 +40,91 @@ def did_x_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select
     position_seven= tic_tac_toe_chart[13]
     position_eight = tic_tac_toe_chart[15]
     position_nine = tic_tac_toe_chart[17]
-    # 1 2 3 is filled with X
-    if position_one == "X" and position_two == "X" and position_three == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    # 4 5 6 filled with X
-    elif position_four == "X" and position_five == "X" and position_six == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    # 7 8 9 filled with X
-    elif position_seven == "X" and position_eight == "X" and position_nine == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    elif position_one == "X" and position_four == "X" and position_seven == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    elif position_two == "X" and position_five == "X" and position_eight == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    elif position_three == "X" and position_six == "X" and position_nine == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    elif position_one == "X" and position_five == "X" and position_nine == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    elif position_three == "X" and position_five == "X" and position_seven == "X":
-        print (Blue + player_x_name +" is the winner!" + END)
-        print(tic_tac_toe_chart) 
-        return play_again()
-    elif position_one != "1" and position_two != "2" and position_three != "3" and position_five != "4" and position_six != "6"and position_seven != "7"and position_eight != "8"and position_nine != "9":
-        print(tic_tac_toe_chart) 
-        print (Green + "its a tie"+ END)
-        return play_again()
-    else:
-        return player_o(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select)
+    if player == "X":
+        # 1 2 3 is filled with X
+        if position_one == "X" and position_two == "X" and position_three == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        # 4 5 6 filled with X
+        elif position_four == "X" and position_five == "X" and position_six == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        # 7 8 9 filled with X
+        elif position_seven == "X" and position_eight == "X" and position_nine == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_one == "X" and position_four == "X" and position_seven == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_two == "X" and position_five == "X" and position_eight == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_three == "X" and position_six == "X" and position_nine == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_one == "X" and position_five == "X" and position_nine == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_three == "X" and position_five == "X" and position_seven == "X":
+            print (Blue + "You Win!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_one != "1" and position_two != "2" and position_three != "3" and position_five != "4" and position_six != "6"and position_seven != "7"and position_eight != "8"and position_nine != "9":
+            print(tic_tac_toe_chart) 
+            print (Green + "its a tie"+ END)
+            return play_again()
+        else:
+            return player_o(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select)
+
+    elif Bot == "X":
+         # 1 2 3 is filled with X
+        if position_one == "X" and position_two == "X" and position_three == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        # 4 5 6 filled with X
+        elif position_four == "X" and position_five == "X" and position_six == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        # 7 8 9 filled with X
+        elif position_seven == "X" and position_eight == "X" and position_nine == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_one == "X" and position_four == "X" and position_seven == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_two == "X" and position_five == "X" and position_eight == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_three == "X" and position_six == "X" and position_nine == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_one == "X" and position_five == "X" and position_nine == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_three == "X" and position_five == "X" and position_seven == "X":
+            print (Red +  "The Bot Wins!" + END)
+            print(tic_tac_toe_chart) 
+            return play_again()
+        elif position_one != "1" and position_two != "2" and position_three != "3" and position_five != "4" and position_six != "6"and position_seven != "7"and position_eight != "8"and position_nine != "9":
+            print(tic_tac_toe_chart) 
+            print (Green + "its a tie"+ END)
+            return play_again()
+        else:
+            return player_o(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select)
 
 # checks to see if player O won if not then keeps game keeps playing
 def did_o_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select):
