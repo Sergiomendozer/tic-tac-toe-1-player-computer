@@ -13,7 +13,6 @@ def player_x(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select)
         print (list_of_positions_for_bot_to_select) ### to delete
         replace = tic_tac_toe_chart.find(position)
         tic_tac_toe_chart = tic_tac_toe_chart[:replace] + 'X' + tic_tac_toe_chart[replace+1:]
-        print(tic_tac_toe_chart) #### delete?
     elif Bot == "X":
         print ("will do next x")
 
