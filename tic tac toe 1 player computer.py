@@ -1,8 +1,9 @@
+import random
 END = '\033[0m'
-Red="\033[0;31m"          # Red
-Green="\033[0;32m"        # Green
-Blue="\033[0;34m"         # Blue
-Purple="\033[0;35m"       # Purple
+Red="\033[0;31m"          
+Green="\033[0;32m"        
+Blue="\033[0;34m"        
+Purple="\033[0;35m"       
 
 def player_x(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select):
     print(tic_tac_toe_chart) 
@@ -10,20 +11,28 @@ def player_x(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select)
         position = input ("Select a position you would like to place X:")
         delete = list_of_positions_for_bot_to_select.index(position)
         list_of_positions_for_bot_to_select.pop(delete)
-        print (list_of_positions_for_bot_to_select) ### to delete
         replace = tic_tac_toe_chart.find(position)
         tic_tac_toe_chart = tic_tac_toe_chart[:replace] + 'X' + tic_tac_toe_chart[replace+1:]
+        return (did_x_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select))
     elif Bot == "X":
-        print ("will do next x")
+        print (Red+"Its bots turn"+END)
+        chosen_position = random.choice(list_of_positions_for_bot_to_select)
+        spot_position_is_in = list_of_positions_for_bot_to_select.index(chosen_position)
+        list_of_positions_for_bot_to_select.pop(spot_position_is_in)
+        replace = tic_tac_toe_chart.find(chosen_position)
+        tic_tac_toe_chart = tic_tac_toe_chart[:replace] + 'X' + tic_tac_toe_chart[replace+1:]
+        # print(tic_tac_toe_chart) 
+        return (did_x_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select))
 
 def player_o (player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select):
     print(tic_tac_toe_chart)
     if player == "O":
         position = input ("Select a position you would like to place O:")
+        delete = list_of_positions_for_bot_to_select.index(position)
+        list_of_positions_for_bot_to_select.pop(delete)
         replace = tic_tac_toe_chart.find(position)
-        tic_tac_toe_chart = tic_tac_toe_chart[:replace] +'O' + tic_tac_toe_chart[replace+1:]
-        did_o_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select)
-    # return tic_tac_toe_player_x(player_x_name, player_o_name,tic_tac_toe_chart)
+        tic_tac_toe_chart = tic_tac_toe_chart[:replace] + 'O' + tic_tac_toe_chart[replace+1:]
+        return (did_o_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select))
     elif Bot == "O":
         print ("will do next o")
 
@@ -136,7 +145,7 @@ def did_o_win(player, Bot, tic_tac_toe_chart,list_of_positions_for_bot_to_select
     position_seven= tic_tac_toe_chart[13]
     position_eight = tic_tac_toe_chart[15]
     position_nine = tic_tac_toe_chart[17]
-    if player == "X":
+    if player == "O":
         # 1 2 3 is filled with X
         if position_one == "O" and position_two == "O" and position_three == "O":
             print (Blue + "You Win!" + END)
